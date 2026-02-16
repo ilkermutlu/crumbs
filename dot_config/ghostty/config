@@ -1,7 +1,64 @@
+# Font
 font-size = 16
+font-thicken = true
+font-thicken-strength = 200
+
+# Cursor
 cursor-style = block
+cursor-click-to-move = true
+
+# Text
 adjust-cell-height = 35%
-mouse-hide-while-typing = true
+minimum-contrast = 1.1
+
+# Theme (auto light/dark switching)
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+# Background
+background-opacity = 0.92
+background-blur = 20
+
+# Window
 macos-titlebar-style = hidden
+window-padding-x = 10
+window-padding-y = 10
 window-padding-balance = true
+window-padding-color = extend
+window-colorspace = display-p3
 window-save-state = always
+window-inherit-font-size = true
+window-vsync = true
+resize-overlay = after-first
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Shell integration
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+
+# Clipboard & security
+clipboard-paste-protection = true
+clipboard-trim-trailing-spaces = true
+copy-on-select = clipboard
+
+# Safety
+confirm-close-surface = true
+undo-timeout = 10s
+
+# Links
+link-url = true
+link-previews = true
+
+# Quick terminal (global drop-down)
+quick-terminal-position = top
+quick-terminal-size = 80%
+quick-terminal-screen = mouse
+quick-terminal-animation-duration = 0.15
+quick-terminal-autohide = true
+
+# Keybinds
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = cmd+up=jump_to_prompt:-1
+keybind = cmd+down=jump_to_prompt:1
+keybind = cmd+shift+p=toggle_command_palette
+keybind = performable:cmd+c=copy_to_clipboard

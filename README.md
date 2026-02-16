@@ -9,7 +9,7 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 - **Neovim** — Lua-based config with Lazy plugin manager (`nvim-ja`)
 - **Doom Emacs** — `config.el`, `init.el`, `packages.el`
 - **tmux** — `.tmux.conf`
-- **Terminal** — Ghostty and Kitty configs
+- **Terminal** — [Ghostty](dot_config/ghostty/README.md) and Kitty configs
 - **SSH** — client config
 - **CLI tools** — GitHub CLI, television, git-delta
 - **Brewfile** — Homebrew packages and casks for macOS

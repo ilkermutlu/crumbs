@@ -4,7 +4,7 @@
 
 | Shortcut | Action |
 |---|---|
-| `Cmd+`` ` | Toggle quick terminal (works globally from any app) |
+| `Ctrl+Cmd+T` | Toggle quick terminal (works globally from any app) |
 | `Cmd+Up` | Jump to previous shell prompt |
 | `Cmd+Down` | Jump to next shell prompt |
 | `Cmd+Shift+P` | Open command palette |
@@ -14,7 +14,7 @@
 ## Features
 
 ### Quick Terminal
-A drop-down terminal summoned from any app with `` Cmd+` ``. Slides in from the top of the screen at 80% width, auto-hides when focus moves away.
+A drop-down terminal summoned from any app with `Ctrl+Cmd+T`. Slides in from the top of the screen at 80% width, auto-hides when focus moves away.
 
 ### Auto Light/Dark Theme
 Uses Catppuccin Latte (light) and Catppuccin Mocha (dark), switching automatically with macOS appearance.

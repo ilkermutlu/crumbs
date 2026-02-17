@@ -57,7 +57,7 @@ quick-terminal-animation-duration = 0.15
 quick-terminal-autohide = true
 
 # Keybinds
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:ctrl+cmd+t=toggle_quick_terminal
 keybind = cmd+up=jump_to_prompt:-1
 keybind = cmd+down=jump_to_prompt:1
 keybind = cmd+shift+p=toggle_command_palette

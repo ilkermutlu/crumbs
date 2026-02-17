@@ -8,7 +8,7 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 - **Git** — global gitconfig and ignore patterns (templated for name/email)
 - **Neovim** — Lua-based config with Lazy plugin manager (`nvim-ja`)
 - **Doom Emacs** — `config.el`, `init.el`, `packages.el`
-- **tmux** — `.tmux.conf`
+- **tmux** — `.tmux.conf` + [tmuxinator](dot_config/tmuxinator/README.md) project layouts
 - **Terminal** — [Ghostty](dot_config/ghostty/README.md) and Kitty configs
 - **SSH** — client config
 - **CLI tools** — GitHub CLI, television, git-delta

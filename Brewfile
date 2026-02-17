@@ -40,6 +40,7 @@ brew "poppler"
 brew "television"
 brew "telnet"
 brew "tmux"
+brew "tmuxinator"
 brew "vite"
 brew "common-fate/granted/granted"
 brew "d12frosted/emacs-plus/emacs-plus@28", args: ["with-native-comp"]

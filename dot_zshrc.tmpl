@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,6 +130,7 @@ export HERD_PHP_84_INI_SCAN_DIR="{{ .chezmoi.homeDir }}/Library/Application Supp
 
 alias v='nvim'
 alias vj='NVIM_APPNAME=nvim-ja nvim'
+alias mux='tmuxinator'
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH

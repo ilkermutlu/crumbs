@@ -3,6 +3,6 @@
 set -euo pipefail
 
 if command -v brew &>/dev/null; then
-    brew bundle --no-lock --file="{{ .chezmoi.sourceDir }}/Brewfile"
+    brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile"
 fi
 {{ end -}}

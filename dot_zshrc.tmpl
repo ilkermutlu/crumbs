@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmuxinator)
+plugins=(git tmuxinator zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,11 +104,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Herd injected NVM configuration
+# Herd injected NVM configuration (lazy-loaded)
 export NVM_DIR="{{ .chezmoi.homeDir }}/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+_nvm_lazy_load() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+}
+nvm() { _nvm_lazy_load; nvm "$@"; }
+node() { _nvm_lazy_load; node "$@"; }
+npm() { _nvm_lazy_load; npm "$@"; }
+npx() { _nvm_lazy_load; npx "$@"; }
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="{{ .chezmoi.homeDir }}/Library/Application Support/Herd/config/php/83/"
@@ -131,12 +137,14 @@ export HERD_PHP_84_INI_SCAN_DIR="{{ .chezmoi.homeDir }}/Library/Application Supp
 alias v='nvim'
 alias vj='NVIM_APPNAME=nvim-ja nvim'
 alias mux='tmuxinator'
+alias assume=". assume"
 
 export PATH="$HOME/.local/bin:$PATH"
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:{{ .chezmoi.homeDir }}/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export PATH="{{ .chezmoi.homeDir }}/Library/Python/3.9/bin:$PATH"
+
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"

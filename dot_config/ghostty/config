@@ -62,3 +62,19 @@ keybind = cmd+up=jump_to_prompt:-1
 keybind = cmd+down=jump_to_prompt:1
 keybind = cmd+shift+p=toggle_command_palette
 keybind = performable:cmd+c=copy_to_clipboard
+
+# Pane navigation (matches tmux C-h/j/k/l)
+keybind = performable:ctrl+h=goto_split:left
+keybind = performable:ctrl+j=goto_split:down
+keybind = performable:ctrl+k=goto_split:up
+keybind = performable:ctrl+l=goto_split:right
+
+# Pane resizing
+keybind = performable:ctrl+shift+h=resize_split:left,10
+keybind = performable:ctrl+shift+j=resize_split:down,10
+keybind = performable:ctrl+shift+k=resize_split:up,10
+keybind = performable:ctrl+shift+l=resize_split:right,10
+
+# Tab reordering (matches tmux prefix+>/<)
+keybind = cmd+shift+.=move_tab:right
+keybind = cmd+shift+,=move_tab:left

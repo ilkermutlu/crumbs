@@ -12,7 +12,7 @@ adjust-cell-height = 35%
 minimum-contrast = 1.1
 
 # Theme (auto light/dark switching)
-theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+theme = Catppuccin Mocha
 
 # Background
 background-opacity = 0.92
